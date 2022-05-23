@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import Aboutus from "./components/Aboutus";
+import Navbar from "./components/Navbar";
+import Textform from "./components/Textform";
+import React, { useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState("light");
+  const [textMode, setTextMode] = useState("dark");
+  const [btnText, setbtnText] = useState("Enable Dark Mode");
+
+  const modeBtn = () => {
+    if (mode === "light") {
+      setMode("dark");
+      setTextMode("light");
+      setbtnText("Enable Light Mode ");
+      document.body.style.backgroundColor = "#212529";
+    } else {
+      setMode("light");
+      setTextMode("dark");
+      setbtnText("Enable Dark Mode ");
+      document.body.style.backgroundColor = "white";
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar
+        title="ANLN"
+        link1="Home"
+        link2="About us"
+        mode={mode}
+        textmode={textMode}
+        modeBtn={modeBtn}
+        btnText={btnText}
+      />
+      <div className="py-5">
+        <Textform
+          heading="Welcome to the Note Application."
+          mode={mode}
+          textmode={textMode}
+        />
+      </div>
+      <Aboutus mode={mode} textmode={textMode} />
     </div>
   );
 }
