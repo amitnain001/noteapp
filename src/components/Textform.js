@@ -5,23 +5,28 @@ export default function Textform(props) {
     // console.log("Upercase was clicked .");
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Text Converted to Uppercase", "success");
   };
   const handleloclick = () => {
     // console.log("Upercase was clicked .");
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Text Converted to Lowercase", "success");
   };
   const handleclear = () => {
     // console.log("Upercase was clicked .");
     let newText = " ";
     setText(newText);
+    props.showAlert("Text is Cleared", "success");
   };
   const copyToclipboard = () => {
     navigator.clipboard.writeText(text);
+    props.showAlert("Text is Copied to clipboard", "success");
   };
   const removeExtraSpace = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Removed extra space from the text", "success");
   };
   const handleOnchange = (event) => {
     // console.log("Onchange is working without any problem.");

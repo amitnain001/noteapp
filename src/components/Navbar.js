@@ -29,22 +29,8 @@ export default function Navbar(props) {
                   {props.link1}
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  {props.link2}
-                </a>
-              </li>
             </ul>
             <form className="d-flex align-items-center">
-              {/* <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-success" type="submit">
-                Search
-              </button> */}
               <div className="form-check form-switch ms-5 mt-2">
                 <input
                   className="form-check-input"
@@ -70,10 +56,8 @@ export default function Navbar(props) {
 Navbar.protoTypes = {
   title: PropTypes.string.isRequired,
   link1: PropTypes.string.isRequired,
-  link2: PropTypes.string.isRequired,
 };
 Navbar.defaultProps = {
   title: "Set Title here",
   link1: "link1",
-  link2: "link2",
 };

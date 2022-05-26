@@ -8,7 +8,7 @@ export default function Aboutus(props) {
       >
         <div className="container">
           <div className="row">
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h2 className="text-center">Declarative</h2>
               <p>
                 React makes it painless to create interactive UIs. Design simple
@@ -18,7 +18,7 @@ export default function Aboutus(props) {
                 predictable and easier to debug.
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h2 className="text-center">Component-Based</h2>
               <p>
                 Build encapsulated components that manage their own state, then
@@ -27,7 +27,7 @@ export default function Aboutus(props) {
                 rich data through your app and keep state out of the DOM.
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h2 className="text-center">Learn Once, Write Anywhere</h2>
               <p>
                 We don’t make assumptions about the rest of your technology
@@ -38,7 +38,7 @@ export default function Aboutus(props) {
             </div>
           </div>
           <div className="row my-5 py-5 ">
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h3>A Simple Component</h3>
               <p>
                 React components implement a render() method that takes input
@@ -47,7 +47,7 @@ export default function Aboutus(props) {
                 can be accessed by render() via this.props.
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h3>A Stateful Component</h3>
               <p>
                 In addition to taking input data (accessed via this.props), a
@@ -56,7 +56,7 @@ export default function Aboutus(props) {
                 markup will be updated by re-invoking render().
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-xl-4">
               <h3>An Application</h3>
               <p>
                 Using props and state, we can put together a small Todo
