@@ -8,6 +8,16 @@ export default function Aboutus(props) {
       >
         <div className="container">
           <div className="row">
+            <div className="col-12 d-none d-sm-block  col-xl-4">
+              <h3>Love You 🥰😘</h3>
+              <img
+                src={require("../images/image.jpg")}
+                className="w-100"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="row d-sm-none">
             <div className="col-12 col-xl-4">
               <h2 className="text-center">Declarative</h2>
               <p>
@@ -65,14 +75,6 @@ export default function Aboutus(props) {
                 event handlers appear to be rendered inline, they will be
                 collected and implemented using event delegation.
               </p>
-            </div>
-            <div className="col-12 d-none d-sm-block  col-xl-4">
-              <h3>Love You 🥰😘</h3>
-              <img
-                src={require("../images/image.jpg")}
-                className="w-100"
-                alt=""
-              />
             </div>
           </div>
         </div>

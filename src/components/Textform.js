@@ -37,7 +37,7 @@ export default function Textform(props) {
   return (
     <>
       <div
-        className={`container-fluid bg-${props.mode} text-${props.textmode}`}
+        className={`container-fluid d-sm-none bg-${props.mode} text-${props.textmode}`}
       >
         <div className="my-3 container">
           <h1 className="text-center">{props.heading}</h1>
