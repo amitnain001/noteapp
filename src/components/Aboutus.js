@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Aboutus(props) {
   return (
@@ -8,14 +8,14 @@ export default function Aboutus(props) {
       >
         <div className="container">
           <div className="row">
-            <div className="col-12 d-none d-sm-block  col-xl-4">
+            {/* <div className="col-12 d-none d-sm-block  col-xl-4">
               <h3>Love You 🥰😘</h3>
               <img
                 src={require("../images/image.jpg")}
                 className="w-100"
                 alt=""
-              />
-            </div>
+              /> */}
+            {/* </div> */}
           </div>
           <div className="row d-sm-none">
             <div className="col-12 col-xl-4">

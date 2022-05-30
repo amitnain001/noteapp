@@ -37,7 +37,7 @@ export default function Textform(props) {
   return (
     <>
       <div
-        className={`container-fluid d-sm-none bg-${props.mode} text-${props.textmode}`}
+        className={`container-fluid  bg-${props.mode} text-${props.textmode}`}
       >
         <div className="my-3 container">
           <h1 className="text-center">{props.heading}</h1>
@@ -49,6 +49,11 @@ export default function Textform(props) {
             rows="8"
           ></textarea>
           <button
+            disabled={
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length === 0
+            }
             type="button"
             className="btn btn-danger my-3 mx-2"
             onClick={handleupclick}
@@ -56,6 +61,11 @@ export default function Textform(props) {
             Convert text to uppercase
           </button>
           <button
+            disabled={
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length === 0
+            }
             type="button"
             className="btn btn-danger my-3 mx-2"
             onClick={handleloclick}
@@ -63,6 +73,11 @@ export default function Textform(props) {
             Convert text to LowerCase
           </button>
           <button
+            disabled={
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length === 0
+            }
             type="button"
             className="btn btn-danger my-3 mx-2"
             onClick={handleclear}
@@ -70,6 +85,11 @@ export default function Textform(props) {
             clear
           </button>
           <button
+            disabled={
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length === 0
+            }
             type="button"
             className="btn btn-danger my-3 mx-2"
             onClick={copyToclipboard}
@@ -77,6 +97,11 @@ export default function Textform(props) {
             copy text
           </button>
           <button
+            disabled={
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length === 0
+            }
             type="button"
             className="btn btn-danger my-3 mx-2"
             onClick={removeExtraSpace}
@@ -87,13 +112,33 @@ export default function Textform(props) {
           <div className="container">
             <h2>Your Text Summary Here</h2>
             <p>
-              {text.split(" ").length} words and {text.length} characters
+              {
+                text.split(/\s+/).filter((element) => {
+                  return element.length !== 0;
+                }).length
+              }{" "}
+              words and{" "}
+              {text.length -
+                text.split(/\s+/).filter((element) => {
+                  return element.length === 0;
+                }).length}
+              characters
             </p>
             <p>
-              You can read this text in {text.split(" ").length * 0.008} mins
+              You can read this text in{" "}
+              {text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length * 0.008}
+              mins
             </p>
             <h2>Preview</h2>
-            <p className="text-danger">{text.toUpperCase()}</p>
+            <p className="text-danger">
+              {text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length > 0
+                ? text.toUpperCase()
+                : "Nothing to show Enter some text"}
+            </p>
           </div>
         </div>
       </div>
